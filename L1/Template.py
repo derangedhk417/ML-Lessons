@@ -33,7 +33,7 @@ class NeuralNetwork(nn.Module):
 
 		# Define and initialize neural network layers here.
 		# This looks something like:
-		# self.layer1 = nn.Linear(2, 10)
+		# self.layer1 = nn.Linear(2, 1)
 		# self.activation_fn = nn.Tanh()
 
 	def forward(self, x):
@@ -199,10 +199,13 @@ if __name__ == '__main__':
 	validation_error = []
 	records          = []
 
+	
+
 	# This is part of the code used to record snapshots. Its just a flattened
 	# version of the x and y coordinates at which the network needs to be evaluated
 	# to make a snapshot.
 	test_data = torch.tensor(flattened_inputs).type(torch.FloatTensor).to(device)
+
 
 	# This error catching block allows you to terminate early by
 	# hitting Ctrl-C
@@ -212,11 +215,15 @@ if __name__ == '__main__':
 			# Also add the training error to the array so it
 			# can be plotted. 
 
+
 			if i % val_interval == 0:
 				with torch.no_grad():
 					# This is where you check your validation error. 
 					# You also want to add it to an array so you can plot
 					# it later.
+
+					
+
 
 				# Report the current error to the user.
 				print("%06d / %06d t: %2.4f v: %2.4f"%(i, max_iterations, terr, verr))
