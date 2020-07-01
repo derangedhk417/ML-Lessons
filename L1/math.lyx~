@@ -398,6 +398,7 @@ ns of mixed partial derivatives.
  order to save time.
  The moral of the story is that optimization algorithms are not perfect
  and sometimes they can fail outright.
+ 
 \end_layout
 
 \end_body

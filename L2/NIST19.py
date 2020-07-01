@@ -11,7 +11,7 @@ from Progress import ProgressBar
 
 # Designed to load and clean up images from NIST special database 19.
 class SDB19Loader:
-	def __init__(self, path='../nist_19/', size=24, out='../nist_19_24'):
+	def __init__(self, path='../nist_19/', size=28, out='../nist_19_28'):
 		self.path = path
 		self.size = size
 		self.out  = out

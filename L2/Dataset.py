@@ -22,7 +22,7 @@ class HandwrittenDataset:
 		files = sorted(files)
 
 		if max_load is not None:
-			idx   = np.random.choice(range(len(files)), max_load, replace=False)
+			idx = np.random.choice(range(len(files)), max_load, replace=False)
 			f = []
 			m = []
 			for i in idx:
@@ -111,6 +111,6 @@ class HandwrittenDataset:
 
 
 if __name__ == '__main__':
-	d = HandwrittenDataset('../nist_19_24/', max_load=50000)
+	d = HandwrittenDataset('../nist_19_28/', max_load=50000)
 	d.configure(device='cuda:0')
 	code.interact(local=locals())

@@ -112,14 +112,14 @@ if __name__ == '__main__':
 	else:
 		device = 'cpu'
 
-	d = HandwrittenDataset('../nist_19_24/', max_load=args.data_size)
+	d = HandwrittenDataset('../nist_19_28/', max_load=args.data_size)
 
 	t_in, t_out, v_in, v_out = d.configure(
 		split=args.train_val_split, device=device
 	)
 
 	network = Net5(
-		24, len(d.class_meta.keys()), args.dropout_p
+		28, len(d.class_meta.keys()), args.dropout_p
 	).to(device)
 
 	print(network)

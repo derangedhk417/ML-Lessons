@@ -27,7 +27,7 @@ class Net5(nn.Module):
 
 		self.conv1 = nn.Conv2d(1, 4, 6, padding=3)
 		self.pool  = nn.MaxPool2d(2)
-		self.conv2 = nn.Conv2d(4, 4, 6, padding=3)
+		self.conv2 = nn.Conv2d(4, 2, 3, padding=3)
 
 		N, C_out, H_out, W_out = self.conv_2d_output_shape(
 			1, 1, self.insize, self.insize, self.conv1
@@ -41,9 +41,6 @@ class Net5(nn.Module):
 		self.l1    = nn.Linear(self.linear_one_input, self.linear_one_output)
 		self.l2    = nn.Linear(self.linear_one_output, 30)
 		self.l3    = nn.Linear(30, self.outsize)
-
-		
-
 		
 	# Returns the shape of the output of a convolutional layer 
 	# based on its input. This assumes square strides and padding.
